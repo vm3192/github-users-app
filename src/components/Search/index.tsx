@@ -1,12 +1,12 @@
 import {FC} from "react";
 
-type Search = {
+type SearchParams = {
 	value: string;
 	changeValue: React.Dispatch<React.SetStateAction<string>> | ((value: string) => void);
 	placeholder: string;
 };
 
-export const Search: FC<Search> = ({value, changeValue, placeholder}) => {
+export const Search: FC<SearchParams> = ({value, changeValue, placeholder}) => {
 	return (
 		<input
 			className="input_search"

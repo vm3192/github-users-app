@@ -19,7 +19,7 @@ export const UserPage: FC = () => {
 		} catch (error) {
 			console.log(error);
 		}
-	}, [login]);
+	}, [login, dispatch]);
 
 	return (
 		<>

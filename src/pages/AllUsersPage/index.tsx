@@ -21,7 +21,7 @@ export const AllUsersPage: FC = () => {
 		} catch (error) {
 			console.log(error);
 		}
-	}, [search]);
+	}, [search, dispatch]);
 
 	return (
 		<>

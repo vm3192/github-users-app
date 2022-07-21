@@ -1,7 +1,7 @@
 import {FC, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux"
-import {fetchUserCard, User, UserCard} from "../../redux/slices/users.slice";
+import {fetchUserCard, User} from "../../redux/slices/users.slice";
 import {RootState, useAppDispatch} from "../../redux/store";
 
 export const UserItem: FC<User> = ({login, avatar_url}) => {
@@ -16,7 +16,7 @@ export const UserItem: FC<User> = ({login, avatar_url}) => {
 		} catch (error) {
 			console.log(error);
 		}
-	}, []);
+	}, [dispatch, login]);
 
 	return (
 		<Link className="user_item" to={`/${login}`}>

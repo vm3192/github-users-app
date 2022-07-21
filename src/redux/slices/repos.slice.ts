@@ -144,5 +144,5 @@ export const reposSlice = createSlice({
 	},
 });
 
-export const {} = reposSlice.actions;
+
 export default reposSlice.reducer;
