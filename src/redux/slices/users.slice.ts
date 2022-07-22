@@ -9,6 +9,7 @@ export const fetchUsers = createAsyncThunk(
 			const {data} = await Axios.get(
 				`https://api.github.com/search/users?q=${search}&per_page=10`,
 			);
+			console.log(data.items)
 			return data.items;
 		}
 	},

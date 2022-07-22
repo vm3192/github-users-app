@@ -2,7 +2,9 @@ import {FC} from "react";
 
 type SearchParams = {
 	value: string;
-	changeValue: React.Dispatch<React.SetStateAction<string>> | ((value: string) => void);
+	changeValue:
+		| ((value: string) => void)
+		| React.Dispatch<React.SetStateAction<string>>;
 	placeholder: string;
 };
 
