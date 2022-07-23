@@ -1,9 +1,9 @@
 import {createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
 import Axios from "axios";
 
-export const fetchUserRepos = createAsyncThunk(
+export const fetchUserRepos = createAsyncThunk<Repo[], {login: string | undefined}>(
 	"userRepos/fetchUserReposStatus",
-	async (params: {login: string | undefined}) => {
+	async (params) => {
 		const {login} = params;
 		const {data} = await Axios.get(
 			`https://api.github.com/users/${login}/repos?per_page=100`,

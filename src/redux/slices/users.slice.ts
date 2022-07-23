@@ -1,9 +1,9 @@
 import Axios from "axios";
 import {createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
 
-export const fetchUsers = createAsyncThunk(
+export const fetchUsers = createAsyncThunk<User[], {search: string}>(
 	"users/fetchUsersStatus",
-	async (params: {search: string}) => {
+	async (params) => {
 		const {search} = params;
 		if (search) {
 			const {data} = await Axios.get(
